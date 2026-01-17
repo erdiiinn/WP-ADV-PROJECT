@@ -1,0 +1,372 @@
+/* ========================== */
+/* FULL BLACK & GOLD CASINO THEME */
+/* ========================== */
+
+/* ===== BODY & GLOBAL ===== */
+html, body {
+    background-color: #0d0d0d !important;
+    color: #FFD700 !important;
+    font-family: 'Arial Black', 'Arial', sans-serif !important;
+}
+
+* {
+    background-color: transparent !important;
+    color: inherit !important;
+    border-color: inherit !important;
+}
+
+/* ===== LINKS ===== */
+a, a * {
+    color: #FFD700 !important;
+    text-decoration: none !important;
+}
+
+a:hover, a:hover * {
+    color: #FFB800 !important;
+    text-shadow: 0 0 15px #FFD700 !important;
+}
+
+/* ===== HEADINGS ===== */
+h1, h2, h3, h4, h5, h6 {
+    color: #FFD700 !important;
+    text-shadow: 1px 1px 5px #000 !important;
+    font-weight: bold !important;
+}
+
+/* ===== NAVBAR ===== */
+.navbar, .navbar-light, .navbar-dark, .navbar-nav, .navbar-nav .nav-item, .navbar-nav .nav-link {
+    background-color: #0d0d0d !important;
+    color: #FFD700 !important;
+    border: none !important;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #FFB800 !important;
+    text-shadow: 0 0 15px #FFD700 !important;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #FFB800 !important;
+    text-shadow: 0 0 20px #FFD700 !important;
+}
+
+.navbar-toggler {
+    background-color: #FFD700 !important;
+    border-color: #FFD700 !important;
+}
+
+/* ===== ADMIN BAR (TOP) ===== */
+#wpadminbar {
+    background: #0d0d0d !important;
+    color: #FFD700 !important;
+}
+
+#wpadminbar a, #wpadminbar span, #wpadminbar .ab-item {
+    color: #FFD700 !important;
+    text-shadow: none !important;
+}
+
+#wpadminbar .ab-top-menu > li > .ab-item:hover {
+    color: #FFB800 !important;
+    text-shadow: 0 0 10px #FFD700 !important;
+}
+
+/* ===== BUTTONS ===== */
+button, .btn, .btn-primary, .nav-link.btn-primary {
+    background: linear-gradient(145deg, #FFD700, #FFB800) !important;
+    color: #0d0d0d !important;
+    font-weight: bold !important;
+    border: 2px solid #FFD700 !important;
+    border-radius: 10px !important;
+    text-shadow: 0 0 5px #000 !important;
+    box-shadow: 0 0 5px #FFD700 !important;
+    transition: all 0.3s !important;
+}
+
+button:hover, .btn:hover, .btn-primary:hover, .nav-link.btn-primary:hover {
+    background: linear-gradient(145deg, #FFB800, #FFD700) !important;
+    box-shadow: 0 0 20px #FFD700 !important;
+    color: #0d0d0d !important;
+}
+
+/* ===== WIDGETS / SIDEBAR ===== */
+.widget, .sidebar, aside {
+    background-color: #1a1a1a !important;
+    border: 2px solid #FFD700 !important;
+    padding: 20px !important;
+    margin-bottom: 25px !important;
+    border-radius: 15px !important;
+    box-shadow: 0 0 15px #FFD700 !important;
+    color: #FFD700 !important;
+}
+
+.widget-title {
+    color: #FFD700 !important;
+    font-weight: bold !important;
+    font-size: 1.3em !important;
+    border-bottom: 2px solid #FFD700 !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 15px !important;
+}
+
+/* ===== POSTS / CONTENT / PAGES ===== */
+.post, .page, .entry-content, .site-content, .content-area {
+    background-color: #1a1a1a !important;
+    border: 2px solid #FFD700 !important;
+    padding: 20px !important;
+    margin-bottom: 25px !important;
+    border-radius: 15px !important;
+    box-shadow: 0 0 10px #FFD700 !important;
+    color: #FFD700 !important;
+}
+
+.wp-block, .wp-block * {
+    background-color: transparent !important;
+    color: #FFD700 !important;
+}
+
+/* ===== FOOTER ===== */
+footer, footer * {
+    background-color: #0d0d0d !important;
+    color: #FFD700 !important;
+    border-top: 2px solid #FFD700 !important;
+    text-align: center !important;
+    padding: 20px !important;
+}
+
+/* ===== FONT AWESOME ICONS ===== */
+.navbar-nav .nav-item i, .widget i {
+    color: #FFD700 !important;
+    margin-right: 5px !important;
+    text-shadow: 0 0 10px #FFD700 !important;
+}
+
+/* ===== LINK HOVER EFFECTS ===== */
+.widget a, .post a, .page a {
+    color: #FFD700 !important;
+}
+
+.widget a:hover, .post a:hover, .page a:hover {
+    color: #FFB800 !important;
+    text-shadow: 0 0 15px #FFD700 !important;
+}
+
+/* ===== OPTIONAL BACKGROUND IMAGE ===== */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('assets/images/casino-bg.png') no-repeat center center !important;
+    background-size: cover !important;
+    opacity: 0.05 !important;
+    z-index: -1 !important;
+}
+
+/* ===== FORCE FULL WIDTH OF SIDEBAR & CONTENT ===== */
+#primary, #secondary, .content-area, .site-main {
+    background-color: #0d0d0d !important;
+    color: #FFD700 !important;
+}
+
+/* Force entire page header / title bar to black */
+.page-header,
+.entry-header,
+.page-title,
+.page-header * ,
+.entry-header * ,
+.page-title * {
+    background-color: #0d0d0d !important; /* Black everywhere */
+    color: #FFD700 !important;           /* Gold text */
+}
+
+/* Force full page header / title bar black with gold text */
+.page-header,
+.page-header * ,
+.entry-header,
+.entry-header * ,
+.page-title,
+.page-title * {
+    background-color: #0d0d0d !important; /* full black */
+    color: #FFD700 !important;           /* gold text */
+}
+
+/* Force all containers, rows, and pseudo-elements inside the header to black */
+.page-header .container,
+.entry-header .container,
+.page-title .container,
+.page-header .row,
+.entry-header .row,
+.page-title .row,
+.page-header::before,
+.page-header::after,
+.entry-header::before,
+.entry-header::after,
+.page-title::before,
+.page-title::after {
+    background-color: #0d0d0d !important;
+}
+
+/* Full height padding for the header */
+.page-header, .entry-header, .page-title {
+    padding: 40px 0 !important; /* controls the height of the bar */
+    border-bottom: 2px solid #FFD700 !important; /* gold border */
+}
+
+/* Page title text */
+.page-header h1, .entry-header h1, .page-title h1,
+.page-header h2, .entry-header h2, .page-title h2 {
+    color: #FFD700 !important;
+    font-weight: bold !important;
+    text-shadow: 0 0 10px #FFD700 !important;
+    text-align: center;
+    margin: 0;
+}
+
+/* Casino Hero Section */
+.casino-hero {
+    background-color: #0d0d0d; /* full black */
+    color: #FFD700;             /* gold text */
+    padding: 60px 20px;
+    text-align: center;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #FFD700 inset;
+    margin: 30px auto;
+    max-width: 900px;
+}
+
+/* Gold highlighted words */
+.casino-hero .gold {
+    color: #FFD700;
+    text-shadow: 0 0 15px #FFD700, 0 0 30px #FFC700;
+    font-weight: bold;
+}
+
+/* Main Title */
+.casino-title {
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px #FFD700;
+}
+
+/* Subtitle */
+.casino-subtitle {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Description / Paragraph */
+.casino-description {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Optional: Add glow effect animation */
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #FFD700, 0 0 20px #FFC700; }
+    50% { text-shadow: 0 0 20px #FFD700, 0 0 40px #FFC700; }
+    100% { text-shadow: 0 0 10px #FFD700, 0 0 20px #FFC700; }
+}
+
+.casino-hero .gold {
+    animation: glow 2s infinite alternate;
+}
+
+.casino-post {
+    background-color: #0d0d0d;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #FFD700 inset;
+}
+
+.casino-post-title {
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+.casino-post-content {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Force entire Sample Page header section black */
+.page-header,
+.entry-header,
+.page-title,
+.page-header * ,
+.entry-header * ,
+.page-title * {
+    background-color: #0d0d0d !important; /* black everywhere */
+    color: #FFD700 !important;
+}
+
+/* Force all containers/rows inside the header to black */
+.page-header .container,
+.entry-header .container,
+.page-title .container,
+.page-header .row,
+.entry-header .row,
+.page-title .row,
+.page-header::before,
+.page-header::after,
+.entry-header::before,
+.entry-header::after,
+.page-title::before,
+.page-title::after {
+    background-color: #0d0d0d !important;
+}
+
+/* Padding / height for the header */
+.page-header, .entry-header, .page-title {
+    padding: 20px 0 !important; /* shrink if needed */
+    border-bottom: 2px solid #FFD700 !important;
+}
+
+/* Title text */
+.page-header h1, .entry-header h1, .page-title h1,
+.page-header h2, .entry-header h2, .page-title h2 {
+    color: #FFD700 !important;
+    text-align: center;
+    text-shadow: 0 0 10px #FFD700;
+    margin: 0;
+}
+
+/* Play Button - Luxury Gold Glow */
+.casino-play-btn {
+    display: inline-block;
+    background: linear-gradient(145deg, #FFD700, #FFC700, #FFB700); /* gold gradient */
+    color: #0d0d0d;                  /* black text */
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 18px 50px;
+    margin-top: 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 
+        0 0 20px #FFD700,       /* outer glow */
+        0 0 40px #FFC700,       /* bigger glow */
+        0 0 60px #FFB700 inset; /* inner glow */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect - intensifies glow and lifts button */
+.casino-play-btn:hover {
+    background: linear-gradient(145deg, #FFE000, #FFD500, #FFC700);
+    box-shadow: 
+        0 0 30px #FFD700, 
+        0 0 50px #FFC700, 
+        0 0 70px #FFB700 inset;
+    transform: scale(1.08);
+    color: #0d0d0d;
+}

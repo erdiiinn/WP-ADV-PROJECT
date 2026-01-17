@@ -1,5 +1,5 @@
 <footer class="footer text-center py-2 theme-bg-dark">
-    <p class="copyright">Germanium Morina</p>
+    <p class="copyright">Erdin Shala</p>
 </footer>
 </div>
 <?php wp_footer();?>

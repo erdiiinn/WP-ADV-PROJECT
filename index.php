@@ -1,16 +1,10 @@
-<?php get_header(); ?>
-
-<article class="content px-3 py-5 p-md-5">
-        <?php
-            if (have_posts()){
-                while(have_posts()){
-                    the_post();
-                    get_template_part('template-parts/content', 'archive');
-                }
-            }
-        ?>
-        <?php 
-            the_posts_pagination();
-        ?>
-    </article>
-<?php get_footer(); ?>
+<?php if ( have_posts() ) : ?>
+    <?php while ( have_posts() ) : the_post(); ?>
+        <div class="casino-post">
+            <h2 class="casino-post-title"><?php the_title(); ?></h2>
+            <div class="casino-post-content"><?php the_content(); ?></div>
+        </div>
+    <?php endwhile; ?>
+<?php else : ?>
+    <p class="casino-no-posts">No posts found.</p>
+<?php endif; ?>
