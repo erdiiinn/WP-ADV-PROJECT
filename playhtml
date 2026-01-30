@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roulette - Casino</title>
+<link rel="stylesheet" href="assets/css/casino.css">
+<style>
+body {
+    background-color: #0d0d0d;
+    color: #FFD700;
+    font-family: 'Arial Black', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+.casino-hero {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Money & Bet */
+.money-display {
+    margin-top: 20px;
+    font-size: 20px;
+}
+.bet-input {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+    background: #1a1a1a;
+    color: #FFD700;
+    width: 120px;
+    text-align: center;
+}
+
+/* Roulette container */
+.roulette-container {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin: 50px auto;
+}
+
+/* Wheel using conic-gradient */
+.roulette-wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid #FFD700;
+    background: conic-gradient(
+        #00FF00 0deg 9.73deg,
+        #FF0000 9.73deg 19.46deg,
+        #000000 19.46deg 29.19deg,
+        #FF0000 29.19deg 38.92deg,
+        #000000 38.92deg 48.65deg,
+        #FF0000 48.65deg 58.38deg,
+        #000000 58.38deg 68.11deg,
+        #FF0000 68.11deg 77.84deg,
+        #000000 77.84deg 87.57deg,
+        #FF0000 87.57deg 97.30deg,
+        #000000 97.30deg 107.03deg,
+        #FF0000 107.03deg 116.76deg,
+        #000000 116.76deg 126.49deg,
+        #FF0000 126.49deg 136.22deg,
+        #000000 136.22deg 145.95deg,
+        #FF0000 145.95deg 155.68deg,
+        #000000 155.68deg 165.41deg,
+        #FF0000 165.41deg 175.14deg,
+        #000000 175.14deg 184.87deg,
+        #FF0000 184.87deg 194.60deg,
+        #000000 194.60deg 204.33deg,
+        #FF0000 204.33deg 214.06deg,
+        #000000 214.06deg 223.79deg,
+        #FF0000 223.79deg 233.52deg,
+        #000000 233.52deg 243.25deg,
+        #FF0000 243.25deg 252.98deg,
+        #000000 252.98deg 262.71deg,
+        #FF0000 262.71deg 272.44deg,
+        #000000 272.44deg 282.17deg,
+        #FF0000 282.17deg 291.90deg,
+        #000000 291.90deg 301.63deg,
+        #FF0000 301.63deg 311.36deg,
+        #000000 311.36deg 321.09deg,
+        #FF0000 321.09deg 330.82deg,
+        #000000 330.82deg 340.55deg,
+        #FF0000 340.55deg 350.28deg,
+        #000000 350.28deg 360deg
+    );
+    position: relative;
+    transition: transform 4s cubic-bezier(0.33,1,0.68,1);
+}
+
+/* Ball */
+.roulette-ball {
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-200px);
+    transform-origin: center center;
+    box-shadow: 0 0 10px #FFD700;
+}
+
+/* Spin button */
+.roulette-spin-btn {
+    margin-top: 30px;
+    padding: 18px 50px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 12px;
+    text-transform: uppercase;
+    color: #0d0d0d;
+    background: linear-gradient(145deg, #FFD700, #FFC700, #FFB700);
+    border: 2px solid #FFD700;
+    cursor: pointer;
+    box-shadow: 0 0 20px #FFD700, 0 0 40px #FFC700, 0 0 60px #FFB700 inset;
+    transition: all 0.3s ease;
+}
+.roulette-spin-btn:hover {
+    background: linear-gradient(145deg, #FFE000, #FFD500, #FFC700);
+    box-shadow: 0 0 30px #FFD700, 0 0 50px #FFC700, 0 0 70px #FFB700 inset;
+    transform: scale(1.08);
+}
+
+/* Result text */
+.roulette-result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 0 0 15px #FFD700;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<header class="casino-hero">
+    <h1 class="casino-title">Roulette</h1>
+    <p class="casino-subtitle">Bet your money on Red or Black and spin!</p>
+</header>
+
+<div class="money-display">Money: $<span id="money">10000</span></div>
+<input type="number" id="betAmount" class="bet-input" placeholder="Bet Amount">
+<select id="betColor" class="bet-input">
+    <option value="Red">Red</option>
+    <option value="Black">Black</option>
+</select>
+
+<div class="roulette-container">
+    <div id="rouletteWheel" class="roulette-wheel"></div>
+    <div id="rouletteBall" class="roulette-ball"></div>
+</div>
+<button id="spinBtn" class="roulette-spin-btn">Spin</button>
+<div id="result" class="roulette-result"></div>
+
+<footer style="margin-top: 50px; text-align:center; padding: 20px; border-top:2px solid #FFD700;">
+    &copy; 2026 Casino. Created by <span class="gold">Erdin Shala</span>
+</footer>
+
+<script>
+const numbers = [
+    0,32,15,19,4,21,2,25,17,34,
+    6,27,13,36,11,30,8,23,10,5,
+    24,16,33,1,20,14,31,9,22,18,
+    29,7,28,12,35,3,26
+];
+
+const colors = [];
+colors.push('Green'); // zero
+for(let i=1;i<numbers.length;i++){
+    colors.push(i%2===1?'Red':'Black');
+}
+
+const wheel = document.getElementById('rouletteWheel');
+const ball = document.getElementById('rouletteBall');
+const spinBtn = document.getElementById('spinBtn');
+const resultText = document.getElementById('result');
+const moneyDisplay = document.getElementById('money');
+let money = 10000;
+
+spinBtn.addEventListener('click',()=>{
+    const betAmount=parseInt(document.getElementById('betAmount').value);
+    const betColor=document.getElementById('betColor').value;
+    if(isNaN(betAmount)||betAmount<=0||betAmount>money){
+        alert('Enter valid bet within your money');
+        return;
+    }
+    resultText.textContent='';
+
+    const wheelSpin=Math.floor(Math.random()*3600)+720;
+    const ballSpin=Math.floor(Math.random()*3600)+720;
+
+    wheel.style.transition='transform 4s cubic-bezier(0.33,1,0.68,1)';
+    wheel.style.transform=`rotate(${wheelSpin}deg)`;
+
+    ball.style.transition='transform 4s cubic-bezier(0.33,1,0.68,1)';
+    ball.style.transform=`translate(-50%, -50%) rotate(${ballSpin}deg) translateY(-200px)`;
+
+    setTimeout(()=>{
+        const finalDegree=(360-(wheelSpin%360))%360;
+        const sectionAngle=360/numbers.length;
+        const index=Math.floor(finalDegree/sectionAngle);
+        const winningNumber=numbers[index];
+        const winningColor=colors[index];
+
+        let outcome='';
+        if(winningColor===betColor){
+            outcome='WIN';
+            money+=betAmount;
+        } else {
+            outcome='LOSE';
+            money-=betAmount;
+        }
+        moneyDisplay.textContent=money;
+        resultText.textContent=`Number: ${winningNumber} - ${winningColor} - ${outcome}`;
+    },4000);
+});
+</script>
+
+</body>
+</html>

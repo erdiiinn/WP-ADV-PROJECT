@@ -1,0 +1,40 @@
+<!-- About Us Page - Casino -->
+<div class="casino-hero page-id-456">
+    <h1 class="casino-title">About Us</h1>
+    <p class="casino-subtitle">
+        Welcome to <span class="gold">Our Casino</span>, the ultimate destination for excitement and entertainment. We are dedicated to providing our players with a luxurious experience, combining top-notch games, unbeatable rewards, and a glamorous gold-and-black ambiance.
+    </p>
+</div>
+
+<div class="casino-post page-id-456">
+    <h2 class="casino-post-title">Our Mission</h2>
+    <div class="casino-post-content">
+        Our mission is to bring the thrill of the casino floor directly to you, wherever you are. With a focus on fairness, security, and world-class service, we ensure every player feels valued and part of our exclusive community.
+    </div>
+</div>
+
+<div class="casino-post page-id-456">
+    <h2 class="casino-post-title">Who We Are</h2>
+    <div class="casino-post-content">
+        Established and crafted by <span class="gold">Erdin Shala</span>, our team is passionate about games, innovation, and providing a seamless, glamorous experience for every visitor. We believe in combining elegance, excitement, and reliability to create a casino experience like no other.
+    </div>
+</div>
+
+<div class="casino-post page-id-456">
+    <h2 class="casino-post-title">Why Choose Us</h2>
+    <div class="casino-post-content">
+        <ul>
+            <li>Luxurious gold-and-black themed interface</li>
+            <li>Exciting games with realistic casino vibes</li>
+            <li>Safe, secure, and fair play</li>
+            <li>Dedicated support for every player</li>
+            <li>Created by <span class="gold">Erdin Shala</span></li>
+        </ul>
+    </div>
+</div>
+
+<div class="casino-hero page-id-456">
+    <p class="casino-description">
+        Thank you for visiting our casino. We hope you enjoy every moment and discover the thrill of our world-class gaming experience.
+    </p>
+</div>

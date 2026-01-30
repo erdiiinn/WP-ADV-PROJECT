@@ -1,0 +1,44 @@
+<!-- WELCOME PAGE (paste in WordPress Custom HTML block) -->
+<style>
+.casino-wrapper{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:radial-gradient(circle at top,#1a1a1a,#000);
+    font-family:Arial,Helvetica,sans-serif;
+    color:#d4af37;
+}
+.casino-box{
+    text-align:center;
+    background:linear-gradient(145deg,#0a0a0a,#1c1c1c);
+    border:2px solid #d4af37;
+    border-radius:16px;
+    padding:50px 40px;
+    box-shadow:0 0 40px rgba(212,175,55,.25);
+}
+.play-btn{
+    display:inline-block;
+    padding:15px 50px;
+    font-size:20px;
+    font-weight:bold;
+    color:#000;
+    background:linear-gradient(90deg,#f5e08e,#d4af37,#b8962e);
+    border-radius:50px;
+    text-decoration:none;
+    box-shadow:0 0 15px rgba(212,175,55,.8);
+    animation:glow 1.8s infinite alternate;
+}
+@keyframes glow{
+    from{box-shadow:0 0 10px rgba(212,175,55,.6);}
+    to{box-shadow:0 0 30px rgba(212,175,55,1);}
+}
+</style>
+
+<div class="casino-wrapper">
+    <div class="casino-box">
+        <h1>WELCOME</h1>
+        <p>Enter the ultimate casino experience</p>
+        <a class="play-btn" href="play.html">PLAY</a>
+    </div>
+</div>

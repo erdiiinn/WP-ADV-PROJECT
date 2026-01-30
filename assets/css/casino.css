@@ -151,7 +151,7 @@ footer, footer * {
     text-shadow: 0 0 15px #FFD700 !important;
 }
 
-/* ===== OPTIONAL BACKGROUND IMAGE ===== */
+/* 
 body::before {
     content: "";
     position: fixed;
@@ -160,7 +160,7 @@ body::before {
     background-size: cover !important;
     opacity: 0.05 !important;
     z-index: -1 !important;
-}
+} /*
 
 /* ===== FORCE FULL WIDTH OF SIDEBAR & CONTENT ===== */
 #primary, #secondary, .content-area, .site-main {
@@ -369,4 +369,20 @@ body::before {
         0 0 70px #FFB700 inset;
     transform: scale(1.08);
     color: #0d0d0d;
+}
+
+/* ===== WELCOME PAGE BACKGROUND IMAGE ===== */
+.page-id-123 {
+    position: relative; /* needed for pseudo-element */
+    z-index: 0;
+}
+
+.page-id-123::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('http://localhost/wordpress/wp-content/uploads/2026/01/pngtree-classy-luxury-casino-game-background-image_774371.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.2; /* adjust brightness */
+    z-index: -1;
 }

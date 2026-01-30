@@ -117,3 +117,13 @@ function wp_adv_widget_areas() {
     ));
 }
 add_action('widgets_init', 'wp_adv_widget_areas');
+
+// Force the custom logo link to always go to the homepage
+function wp_adv_fix_logo_link($html) {
+    $home_url = esc_url(home_url('/'));
+    // Replace whatever href is in the logo with correct homepage URL
+    $html = preg_replace('/href=".*?"/', 'href="' . $home_url . '"', $html);
+    return $html;
+}
+add_filter('get_custom_logo', 'wp_adv_fix_logo_link');
+
